@@ -37,8 +37,14 @@ var owners = [
 
 
 // GET /api/owners
-
+app.get('/api/owners', function(req, res, next) {
+    res.send(owners)
+})
 // GET /api/owners/:id
+
+app.get('/api/owners/:id', function (req, res, next) {
+    res.send(req.params)
+})
 
 // POST /api/owners
 
